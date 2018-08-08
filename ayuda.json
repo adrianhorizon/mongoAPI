@@ -1,18 +1,49 @@
-Algunos comandos importantes a tener en cuenta sobre MongoDB son:
+/*Algunos comandos importantes a tener en cuenta sobre MongoDB son:
 
 mongo --help Muestra el menú de ayuda.
+
 show dbs Muestra las bases de datos existentes en MongoDB.
+
 use [name-db] Permite usar una base de datos determinada.
+
 db.<collection>.insert({JSON-Document}) Permite crear una colección (tabla en MySQL) e insertar datos en una base de datos.
+
 show collections Muestra las colecciones existentes.
+
 db.createCollection('name-colletion') Crea una colección de manera explicita.
+
 load('name-file.js') Permite cargar un archivo JavaScript a MongoDB.
+
+mongo permite hacer scripts en javascript para ciertas funciones
 
 // insertar un array json en documentos1 mongodb
 //  b.ticker.insert(documentos1) mongoDb
 // db.ticker.insertOne(documentos2)
 // insertar multiples documentos
 // db.ticker.insertMany([documento3,documento4])
+// db.ticker.find().pretty() // para mostrar legibilidad en la base datos
+ 
+*/
+/*
+ * > show collections
+curso
+> db.find()
+2018-08-07T18:12:53.689-0500 E QUERY    [js] TypeError: db.find is not a function :
+@(shell):1:1
+> db.curso.find()
+{ "_id" : ObjectId("5b6a27612519c252076e272b"), "name" : "Platzi" }
+> db.createCollection("curso1")
+{ "ok" : 1 }
+> show collections
+curso
+curso1
+> function hello() {
+... print("hola")
+... }
+> hello()
+ * 
+ * 
+*/
 
 /*
 buscar en mongo
